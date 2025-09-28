@@ -1,0 +1,393 @@
+/* ===== VARIÁVEIS E ESTILOS GERAIS ===== */
+:root {
+  --primary-color: #fa0505;
+  --secondary-color: #8a2be2;
+  --background-dark: #050505;
+  --background-light: #1e1e1e;
+  --text-light: #ecd8d8;
+  --text-dark: #1b1f20;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--background-dark);
+  color: var(--primary-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+/* ===== HEADER E NAVEGAÇÃO ===== */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: linear-gradient(135deg, var(--background-light), #2a2a2a);
+  border-radius: 10px;
+  border: 1px solid var(--secondary-color);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+header p {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  margin-bottom: 20px;
+}
+
+nav {
+  background-color: var(--text-light);
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+nav a {
+  margin: 0 15px;
+  color: var(--text-dark);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
+
+/* ===== SECTIONS GERAIS ===== */
+section {
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: var(--background-light);
+  border-radius: 8px;
+  border-left: 4px solid var(--secondary-color);
+}
+
+h2 {
+  color: var(--text-light);
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+/* ===== INFO BOXES ===== */
+
+.imagem-destaque {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 10px;
+    border: 3px solid #8a2be2;
+    box-shadow: 0 5px 15px rgba(138, 43, 226, 0.3);
+}
+
+.info-box {
+  background-color: #2a2a2a;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border-left: 5px solid var(--secondary-color);
+  transition: transform 0.3s ease;
+}
+
+.info-box:hover {
+  transform: translateX(5px);
+}
+
+.info-box h3 {
+  color: var(--text-light);
+  margin-bottom: 10px;
+}
+
+/* ===== GALERIA ===== */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  justify-content: center;
+}
+
+.galeria-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.galeria-img:hover {
+  transform: scale(1.05);
+  border-color: var(--secondary-color);
+  box-shadow: 0 5px 15px rgba(138, 43, 226, 0.3);
+}
+
+/* ===== TABELA ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+table, th, td {
+  border: 1px solid var(--primary-color);
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: rgba(250, 5, 5, 0.1);
+}
+
+/* ===== FORMULÁRIO ===== */
+form {
+  max-width: 600px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--text-light);
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px;
+  background-color: #2a2a2a;
+  color: var(--text-light);
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--secondary-color);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #7b1fa2;
+}
+
+/* ===== VIDEO E AUDIO ===== */
+iframe {
+  border-radius: 8px;
+  border: 2px solid var(--secondary-color);
+}
+
+audio {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  font-size: 0.9em;
+  color: #888;
+  padding: 20px;
+  margin-top: 40px;
+  border-top: 1px solid #333;
+}
+
+/* ===== MEDIA QUERIES - DESIGN RESPONSIVO ===== */
+
+/* Tablets (768px para baixo) */
+@media screen and (max-width: 768px) {
+  body {
+    padding: 15px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  nav {
+    padding: 10px;
+  }
+
+  nav a {
+    display: block;
+    margin: 10px 0;
+    padding: 8px;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 5px;
+  }
+
+  section {
+    padding: 15px;
+    margin-bottom: 30px;
+  }
+
+  .galeria {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+  }
+
+  .galeria-img {
+    height: 150px;
+  }
+
+  iframe {
+    width: 100%;
+    height: 300px;
+  }
+
+  table {
+    font-size: 0.9rem;
+  }
+
+  th, td {
+    padding: 8px;
+  }
+}
+
+/* Celulares (480px para baixo) */
+@media screen and (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  header p {
+    font-size: 0.9rem;
+  }
+
+  section {
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  .galeria {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .galeria-img {
+    height: 120px;
+  }
+
+  iframe {
+    height: 200px;
+  }
+
+  table {
+    font-size: 0.8rem;
+  }
+
+  th, td {
+    padding: 6px;
+  }
+
+  form {
+    max-width: 100%;
+  }
+
+  button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  nav a {
+    margin: 5px 0;
+    font-size: 0.9rem;
+  }
+}
+
+/* Telas muito pequenas (360px para baixo) */
+@media screen and (max-width: 360px) {
+  .galeria {
+    grid-template-columns: 1fr;
+  }
+
+  .galeria-img {
+    height: 200px;
+  }
+
+  header h1 {
+    font-size: 1.4rem;
+  }
+
+  nav a {
+    font-size: 0.8rem;
+    padding: 6px;
+  }
+}
+
+/* Telas grandes (1200px para cima) */
+@media screen and (min-width: 1200px) {
+  body {
+    padding: 30px;
+  }
+
+  .galeria {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .galeria-img {
+    height: 250px;
+  }
+}
+
+/* Modo paisagem em celulares */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  body {
+    padding: 10px;
+  }
+
+  header {
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+
+  section {
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+}
